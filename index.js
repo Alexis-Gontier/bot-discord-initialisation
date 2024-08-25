@@ -1,7 +1,9 @@
-const { Client, IntentsBitField } = require('discord.js');
-const client = new Client({intents: new IntentsBitField(53608447)});
-require('dotenv').config();
+import { Client, IntentsBitField } from 'discord.js';
+import 'dotenv/config';
 
+const client = new Client({
+    intents: new IntentsBitField(53608447)
+});
 
 client.login(process.env.DISCORD_TOKEN);
 
